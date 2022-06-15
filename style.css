@@ -1,0 +1,180 @@
+@charset "UTF-8";
+/*
+c5ebd6 - 83e1ad - 3ddc84 - 2fa866 - 1a5c37 - 063d16
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+/*Definindo variavel(root) para trabalhar melhor com cores. Usando a pseudo-classe root*/
+:root{
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d16;
+
+    --fonte-padrao: 'Arrial Narrow', Verdana, Helvetica;
+    --font-destaque: 'Bebas Neue', cursive;
+    --font-android: 'Android', cursive;
+}
+/*As variáveis de cores são importantes, pois, se o cliente mudar a paleta do projeto, é necessário apenas mudar na descrição das variáveis*/
+*{
+    margin: 0px;
+    padding: 0px;
+    margin: auto;
+}
+body{
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+}
+header{ 
+    background-image: linear-gradient(to top, var(--cor3), var(--cor5));
+    color: white;
+    min-height: 150px;
+    text-align: center;
+}
+nav{
+    background-color: var(--cor5);
+    padding: 5px;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.521);
+}
+nav a{
+    text-decoration: none;
+    color: var(--cor0);
+    padding-left: 10px;
+    font-weight: bold;  
+}
+a:hover{
+    color: var(--cor4);
+    background-color: var(--cor3);
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+a.externo::after{
+    content: '\00a0\1f517';
+}
+header h1{
+    font-family: var(--font-destaque);
+    font-size: 3em;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    text-shadow: 5px 7px 3px black;
+}
+header p{
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+main{
+    background-color: whitesmoke;
+    min-width: 300px;
+    max-width: 1000px;
+    line-height: 1.75em;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 15px;
+    box-shadow: 2px 2px 10px black;
+}
+main p{
+    padding: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+}
+main h1{
+    font-family: var(--font-android);
+    color: var(--cor5);
+}
+main h2{
+    text-indent: 15px;
+    font-family: var(--font-android);
+    font-size: 1.4em;
+    color: var(--cor1);
+    background-image: linear-gradient(to right, var(--cor4), transparent);
+}
+main h2:hover{
+    border-radius: 5px;
+    transition-duration: .5s;
+}
+main img{
+    width: 90%;
+    display: block;   
+}
+main img.pequena{
+    display: block;
+    margin: auto;
+    max-width: 350px;
+}
+main strong{
+    color: var(--cor4);
+    font-weight: bold;
+    padding: 2px 4px;
+    font-size: 1.1em;
+}
+main a{
+    text-decoration: none;
+    color: var(--cor5);
+    font-weight: bold;
+    font-size: 1.1em;
+    background-color: var(--cor2);
+    padding: 2px 6px;
+}
+.quatro{
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px var(--cor5);
+}
+.video{
+    background-color: var(--cor5);
+    margin: 0px -15px 15px -15px;
+    position: relative;
+    padding-bottom: 45%;
+}
+.video iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+section h3{
+    background-color: var(--cor5);
+    color: var(--cor0);
+    padding: 3px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 5px 5px 0px 0px;
+}
+section ul{
+    list-style-type: '\2714\00A0\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+footer{
+    background-color: var(--cor5);
+    color: white;
+    margin-bottom: 3px;
+    max-width: 1335px;
+    text-align: center;
+    padding: 5px;
+    font-weight: bolder;
+}
+footer a{
+    text-decoration:none;
+    color: var(--cor3);
+}
+footer a:hover{
+    color: var(--cor0);
+}
